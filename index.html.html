@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🛡️  Sharjeel Morqrab | Senior Security Engineer | Cybersecurity Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Root Variables for Theming --- */
+        :root {
+            /* Dark Mode Defaults */
+            --bg-primary: #121212;
+            --bg-secondary: #1e1e1e;
+            --text-primary: #f0f0f0;
+            --text-secondary: #b0b0b0;
+            --accent-color: #00bcd4;
+            /* Deep Cyan/Blue */
+            --shadow-color: rgba(0, 188, 212, 0.3);
+            --border-color: #333;
+            --section-padding: 80px 0;
+            --font-family: 'Inter', sans-serif;
+        }
+        
+
+        /* Summary */
+        .summary {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        /* Light Mode Overrides */
+        .light-mode {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f4f4f9;
+            --text-primary: #212121;
+            --text-secondary: #666;
+            --accent-color: #007bb5;
+            /* Professional Blue */
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --border-color: #ddd;
+        }
+
+        /* --- Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            transition: background-color 0.4s, color 0.4s;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: var(--section-padding);
+            /* Scroll offset for fixed header */
+            scroll-margin-top: 80px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-align: center;
+            color: var(--accent-color);
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: var(--bg-secondary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 10px var(--shadow-color);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        nav a {
+            padding: 0 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-transform: capitalize;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-primary);
+        }
+
+        /* --- Toggle Button --- */
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: var(--bg-primary);
+            padding: 10px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .toggle-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- Home/Hero Section --- */
+        #home {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--accent-color);
+            box-shadow: 0 0 20px var(--shadow-color);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5em;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+        }
+
+        .hero-content .job-title {
+            font-size: 1.5em;
+            color: var(--accent-color);
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .hero-content .summary {
+            font-size: 1.1em;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-right: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--bg-primary);
+        }
+
+        .btn-primary:hover {
+            background-color: #0099b3;
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            font-size: 1.8em;
+            margin-right: 20px;
+            color: var(--text-secondary);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- About Section & Content Boxes --- */
+        .key-info {
+            background-color: var(--bg-secondary);
+            padding: 20px;
+            border-left: 5px solid var(--accent-color);
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        .key-info p {
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        .key-info i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        /* --- Experience Section (Clean Blocks) --- */
+        .experience-item {
+            background-color: var(--bg-secondary);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            box-shadow: 0 2px 10px var(--shadow-color);
+            transition: transform 0.3s;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience-item h4 {
+            color: var(--accent-color);
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .duration {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .experience-item ul li::before {
+            content: "\f058";
+            /* Check mark icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* --- Skills & Certifications Section --- */
+        .skills-cert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .skills-container,
+        .cert-container {
+            background-color: var(--bg-secondary);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px var(--shadow-color);
+        }
+
+        .skills-container h3,
+        .cert-container h3 {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            background-color: var(--accent-color);
+            color: var(--bg-primary);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .certification-item {
+            margin-bottom: 15px;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .certification-item:last-child {
+            border-bottom: none;
+        }
+
+        .certification-item h4 {
+            color: var(--text-primary);
+            font-size: 1.1em;
+            margin-bottom: 3px;
+        }
+
+        .certification-item p {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+        }
+
+        /* --- Contact Section --- */
+        .contact-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-detail {
+            flex-basis: 30%;
+            text-align: center;
+            padding: 20px;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border-top: 5px solid var(--accent-color);
+        }
+
+        .contact-detail i {
+            font-size: 2.5em;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .contact-detail h4 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .contact-detail p,
+        .contact-detail a {
+            color: var(--text-secondary);
+            font-size: 1em;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            color: var(--text-secondary);
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .skills-cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                flex-direction: column;
+            }
+
+            .contact-detail {
+                flex-basis: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .job-title {
+                font-size: 1.2em;
+            }
+
+            .hero-image img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .buttons a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark-mode">
+    <button class="toggle-btn" onclick="toggleMode()">
+        <i class="fas fa-sun" id="mode-icon"></i>
+    </button>
+
+    <header>
+        <nav class="container">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills & Certs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <p style="color: var(--text-secondary); font-size: 1.1em;">Hello, I'm</p>
+                <h1>Sharjeel Moqrab Khan</h1>
+                <p class="job-title"><i class="fas fa-shield-halved"></i> Senior Security Engineer | Cybersecurity
+                    Analyst</p>
+                <p class="summary">
+                    I’m a cybersecurity professional with 4+ years of experience in SOC operations, SIEM management, and
+                    detection engineering focused on turning visibility into actionable defense and effective incident
+                    response.
+                    I specialize in SOC process maturity, MITRE ATT&CK aligned detections, and threat analysis to
+                    enhance response and resilience.
+                    I’ve managed enterprise security platforms including Trend Micro Apex One, Email Security Gateway,
+                    Web Security (TMWS), and FireEye HX, strengthening endpoint, email, and network defense layers.
+                    I also contribute to application security through ASVS-based code reviews, Guardsquare protection,
+                    and penetration testing, bridging the gap between detection and application-level defense.
+                    Passionate about building smarter, data-driven defenses that evolve with modern threats.
+                </p>
+                <div class="buttons">
+                    <a href="https://drive.google.com/file/d/1oKHz6JlY6baxybGDmd2YrA4vLeOloKnt/view?usp=sharing"
+                        class="btn-primary" target="_blank">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="#contact" class="btn-primary"
+                        style="background-color: var(--bg-secondary); color: var(--accent-color); border: 1px solid var(--accent-color);">
+                        <i class="fas fa-comment"></i> Hire Me
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/sharjeel-moqrab-787614195/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:Sharjeelkh1995@gmail.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/923042358898" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://x.com/sharjeel_MK" target="_blank" title="X (Twitter)">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://medium.com/@sharjeelkh1995" target="_blank" title="Medium">
+                        <i class="fab fa-medium"></i>
+                    </a>
+                </div>
+
+            </div>
+            <div class="hero-image">
+                <img src="./assets/Sharjeel.jpg" alt="Sharjeel Moqrab Khan" />
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2 class="section-title">About Sharjeel</h2>
+        <p style="font-size: 1.1em; color: var(--text-primary); margin-bottom: 20px; text-align: justify;">
+            From my first exposure to threat detection dashboards, I was hooked on the idea that every alert tells a
+            story one that can reveal risk, intent, and opportunity for defense. Over the past four years, I’ve turned
+            that curiosity into expertise, working across SOC monitoring, incident response, and detection engineering.
+            <br><br>
+            My experience in fintech and banking security operations has shaped my understanding of how to protect what
+            matters most trust and data integrity. Over the years, I’ve worked at the intersection of SOC operations,
+            product security, and vulnerability assessment, focusing on both detection engineering and proactive
+            defense. Whether fine-tuning SIEM correlation rules, performing security testing, or strengthening endpoint
+            and email security controls, my goal remains simple: to turn complexity into clarity and build security that
+            scales with confidence.
+        </p>
+
+
+        <div class="key-info">
+            <h3>Core Philosophy</h3>
+            <p><i class="fas fa-check-circle"></i> Proactive Defense: Focused on detection engineering and threat
+                hunting mapped to the MITRE ATT&CK framework, transforming telemetry into context-rich insights.</p>
+            <p><i class="fas fa-check-circle"></i> Secure Development & Product Hardening: Experienced in application
+                security reviews, mobile app hardening (Guardsquare), and vulnerability management, ensuring that
+                security is embedded early in the lifecycle.</p>
+            <p><i class="fas fa-check-circle"></i> Governance & Compliance: Strong understanding of ISO 27001, PCI DSS,
+                and GDPR practices—aligning technical controls with business objectives and maintaining audit-ready
+                environments.</p>
+            <p><i class="fas fa-check-circle"></i> Continuous Improvement: Passionate about optimizing detection
+                coverage, reducing false positives, and enhancing team response maturity through data-driven tuning and
+                knowledge sharing.</p>
+        </div>
+
+        <div class="key-info" style="margin-top: 20px;">
+            <h3>Academic Background</h3>
+            <p><i class="fas fa-graduation-cap"></i> Bachelor of Computer Science - Benazir Bhutto Shaheed University
+                Lyari</p>
+            <p><i class="fas fa-calendar"></i> Year of Birth: 1995 | Nationality: Pakistani</p>
+            <p><i class="fas fa-language"></i> Languages: Urdu (Native), English (C1/B2)</p>
+        </div>
+    </section>
+
+    <section id="experience" class="container">
+        <h2 class="section-title">Professional Experience</h2>
+
+        <div class="experience-item">
+            <h4>Senior Security Engineer</h4>
+            <span class="duration">NayaPay (Private) Limited | Karachi, Pakistan | Sep 2023 – Present</span>
+            <ul>
+                <li> Worked 24×7 SOC monitoring and detection operations using SIEM, transforming alerts into actionable
+                    intelligence.</li>
+                <li>Develop and fine-tune correlation rules aligned with MITRE ATT&CK, improving detection precision and
+                    reducing noise.</li>
+                <li>Perform threat analysis, incident triage, and EDR-based containment for phishing, malware, and
+                    exploitation attempts.</li>
+                <li>Automate repetitive SOC tasks such as vulnerability-to-CVE mapping and Slack-based exploitability
+                    alerts using custom scripts.</li>
+                <li>Conduct vulnerability assessments (Tenable Nessus) and web/mobile/API testing based on OWASP Top 10
+                    and ASVS guidelines.</li>
+                <li>Review SDK and mobile app security with Guardsquare (DexGuard, iXGuard), improving resilience
+                    against reverse engineering.</li>
+                <li>Manage and monitor enterprise-grade security controls including Trend Micro Apex One (EDR/AV), Email
+                    Security Gateway, and Web Proxy.</li>
+                <li>Oversee infrastructure security by reviewing firewall rule changes, validating configurations, and
+                    monitoring Cloudflare WAF events.</li>
+                <li>Collaborate with development, infrastructure, and compliance teams to align detections and responses
+                    with business risk and audit standards.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>Security Operation Centre Analyst</h4>
+            <span class="duration">BankIslami Pakistan Limited | Karachi, Pakistan | Mar 2022 – Sep 2023</span>
+            <ul>
+                <li>Monitored enterprise infrastructure through IBM QRadar SIEM, tuning correlation rules and reducing
+                    false positives by over 30%.</li>
+                <li>Investigated alerts from FireEye HX and Trend Micro Apex One (EDR), ensuring timely response and
+                    containment of malware incidents.</li>
+                <li>Administered IBM Guardium for Database Activity Monitoring (DAM), maintaining integrity and
+                    visibility of critical financial databases.</li>
+                <li>Enriched investigations using threat intelligence from MISP, Anomali, and AlienVault OTX,
+                    accelerating RCA and IOC validation.</li>
+                <li>Analyzed phishing and malware campaigns via Trend Micro Email Security, performing detailed header
+                    and payload analysis for IOC extraction.</li>
+                <li>Collaborated with managed security providers and internal teams to enhance SOC maturity and reduce
+                    MTTD/MTTR across incident workflows.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>IT Support Specialist</h4>
+            <span class="duration">The Vikor Health Care | Karachi, Pakistan | Nov 2021 – Feb 2022</span>
+            <ul>
+                <li>Provided technical support for software, network, and endpoint issues, ensuring minimal downtime
+                    across office systems.</li>
+                <li>Performed manual Software Quality Assurance (SQA) testing and assisted in troubleshooting software
+                    defects before release.</li>
+                <li>Configured and maintained LAN/WAN devices, improving network stability and user connectivity.</li>
+                <li>Collaborated with development and IT teams to ensure smooth deployment and system updates across
+                    departments.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2 class="section-title">Core Skills & Certifications</h2>
+        <div class="skills-cert-grid">
+            <div class="skills-container">
+                <h3><i class="fas fa-tools"></i> Skills</h3>
+                <div class="skill-list">
+                    <span class="skill-badge">SOC Monitoring & Incident Response</span>
+                    <span class="skill-badge">Detection Engineering</span>
+                    <span class="skill-badge">Threat Hunting & IOC Analysis</span>
+                    <span class="skill-badge">Vulnerability Assessment & Management</span>
+                    <span class="skill-badge">Penetration Testing & Web Security</span>
+                    <span class="skill-badge">EDR / WAF Monitoring & Tuning</span>
+                    <span class="skill-badge">Security Automation (Bash, Python)</span>
+                    <span class="skill-badge">Compliance (ISO 27001, PCI-DSS)</span>
+                    <span class="skill-badge">IBM QRadar (SIEM)</span>
+                    <span class="skill-badge">Microsoft Sentinel</span>
+                    <span class="skill-badge">Wazuh (SIEM)</span>
+                    <span class="skill-badge">IBM Guardium (DAM)</span>
+                    <span class="skill-badge">Trend Micro Suite (Apex One, Email, Web Security)</span>
+                    <span class="skill-badge">FireEye HX (EDR)</span>
+                    <span class="skill-badge">Cloudflare WAF</span>
+                    <span class="skill-badge">ModSecurity CRS (WAF)</span>
+                    <span class="skill-badge">Nessus (Vulnerability Scanner)</span>
+                    <span class="skill-badge">Burp Suite (Web PenTesting)</span>
+                    <span class="skill-badge">Nmap, Wireshark</span>
+                    <span class="skill-badge">MITRE ATT&CK Framework</span>
+                    <span class="skill-badge">Cyber Kill Chain Model</span>
+                    <span class="skill-badge">OWASP Top 10 / ASVS</span>
+                    <span class="skill-badge">IDS / IPS</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">Bash</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">HTML / CSS</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">Dart</span>
+                    <span class="skill-badge">Windows (Server & Endpoint)</span>
+                    <span class="skill-badge">Linux (Kali, Ubuntu)</span>
+                    <span class="skill-badge">VMware ESXi / Workstation</span>
+                </div>
+            </div>
+
+            <div class="cert-container">
+                <h3><i class="fas fa-award"></i> Certifications & Badges</h3>
+                <div class="certification-item">
+                    <h4>Certified in Cybersecurity (CC)</h4>
+                    <p>(ISC)² - 07/2023 | <a href="https://drive.google.com/file/d/13CSxSvzS2axZTz4iv06v5X1SqRgusyMX/view" target="_blank">View Credential</a></p>
+                </div>
+                <div class="certification-item">
+                    <h4>Microsoft Certified: Azure Fundamentals</h4>
+                    <p>Microsoft - 06/2023 | <a href="https://www.credly.com/badges/51f90cbb-0b19-4902-a05a-ef9df2fd3126/linked_in_profile" target="_blank">View Credential</a></p>
+                </div>
+                <div class="certification-item">
+                    <h4>IBM QRadar SIEM Foundation</h4>
+                    <p>IBM - 04/2023 | <a href="https://www.credly.com/badges/b57cf301-35e2-4ebc-b01f-32617d18679a/linked_in_profile" target="_blank">View Credential</a></p>
+                </div>
+                <div class="certification-item">
+                    <h4>Practical Web Application Security and Testing</h4>
+                    <p>TCM Security - 05/2023 | <a href="https://drive.google.com/file/d/1aX9DHVc2t363IjeD9xGM2RVmOVEbJLIi/view" target="_blank">View Credential</a></p>
+                </div>
+                <div class="certification-item">
+                    <h4>Ethical Hacking Essentials (EHE)</h4>
+                    <p>TCM Security - 02/2022 | <a href="https://eccommonstorage.blob.core.windows.net/codered/certificates/7a2d8bfa-b7cb-495c-8fab-158e2148dc5f.png" target="_blank">View Credential</a></p>
+                </div>
+                <div class="certification-item">
+                    <h4>Google IT Support Certificate</h4>
+                    <p>TCM Security - 05/2023 | <a href="https://www.credly.com/badges/45def224-8619-42e4-a7b3-121e63298597?source=linked_in_profile" target="_blank">View Credential</a></p>
+                </div>
+                <div class="certification-item">
+                    <h4>JavaScript Algorithms and Data Structures</h4>
+                    <p>TCM Security - 10/2020 | <a href="https://www.freecodecamp.org/certification/fcccf40f295-3dd3-4b79-a803-8f67251feaa8/javascript-algorithms-and-data-structures" target="_blank">View Credential</a></p>
+                </div>
+                <div class="certification-item">
+                    <h4>Responsive Web Design</h4>
+                    <p>TCM Security - 04/2019 | <a href="https://www.freecodecamp.org/certification/fcccf40f295-3dd3-4b79-a803-8f67251feaa8/responsive-web-design" target="_blank">View Credential</a></p>
+                </div>
+                <div class="certification-item">
+                    <h4>IELTS - Academic (Band: 6.5)</h4>
+                    <p>IDP Pakistan - 12/2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 40px;">
+            I am available for new opportunities and collaborations. Feel free to connect via any of the channels below.
+        </p>
+
+        <div class="contact-grid">
+            <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <h4>Email Address</h4>
+                <a href="mailto:Sharjeelkh1995@gmail.com">Sharjeelkh1995@gmail.com</a>
+            </div>
+            <div class="contact-detail">
+                <i class="fab fa-linkedin"></i>
+                <h4>LinkedIn Profile</h4>
+                <a href="https://www.linkedin.com/in/sharjeel-moqrab-787614195/" target="_blank">Sharjeel Moqrab</a>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-phone"></i>
+                <h4>Phone / WhatsApp</h4>
+                <a href="https://wa.me/923042358898" target="_blank">(+92) 3042358898</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sharjeel Moqrab Khan. All Rights Reserved. | Crafted for Professional Security.</p>
+    </footer>
+
+    <script>
+        // Set initial mode to Dark
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('dark-mode');
+            updateToggleIcon();
+        });
+
+        function toggleMode() {
+            document.body.classList.toggle('light-mode');
+            updateToggleIcon();
+        }
+
+        function updateToggleIcon() {
+            const icon = document.getElementById('mode-icon');
+            if (document.body.classList.contains('light-mode')) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
