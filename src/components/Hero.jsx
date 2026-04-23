@@ -32,7 +32,7 @@ const Hero = () => {
           </div>
         </div>
         <div style={heroImageContainerStyle}>
-          <img src="https://github.com/SharjeelMoqrabKhan/me/blob/main/public/assets/sharjeel.jpg?raw=true" alt="Sharjeel Moqrab Khan" style={heroImageStyle} />
+          <img src="\me\public\assets\sharjeel.jpg" alt="Sharjeel Moqrab Khan" style={heroImageStyle} />
           <div style={glowEffectStyle}></div>
         </div>
       </div>
