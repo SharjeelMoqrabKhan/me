@@ -1,4 +1,5 @@
 import React from 'react';
+import sharjeelImg from '../assets/sharjeel.jpg';
 
 const Hero = () => {
   return (
@@ -31,8 +32,9 @@ const Hero = () => {
             <a href="https://medium.com/@sharjeelkh1995" target="_blank" rel="noreferrer" style={socialIconStyle}><i className="fab fa-medium"></i></a>
           </div>
         </div>
+
         <div style={heroImageContainerStyle}>
-          <img src="https://avatars.githubusercontent.com/u/38564835?v=4" alt="Sharjeel Moqrab Khan" style={heroImageStyle} />
+          <img src={sharjeelImg} alt="Sharjeel Moqrab Khan" style={heroImageStyle} />
           <div style={glowEffectStyle}></div>
         </div>
       </div>
