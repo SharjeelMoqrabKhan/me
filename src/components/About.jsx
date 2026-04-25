@@ -4,14 +4,14 @@ const About = () => {
   return (
     <section id="about" className="container" style={{ position: 'relative' }}>
       <h2 className="section-title">About Me</h2>
-      
+
       <div className="glass-panel" style={mainCardStyle}>
         <div style={decoratorStyle}></div>
         <p style={paragraphStyle}>
-          From my first exposure to threat detection dashboards, I was hooked on the idea that every alert tells a story—one that can reveal risk, intent, and opportunity for defense. Over the past four years, I’ve turned that curiosity into expertise, working across SOC monitoring, incident response, and detection engineering.
+          From my first exposure to threat detection dashboards, I was hooked on the idea that every alert tells a story,one that can reveal risk, intent, and opportunity for defense. Over the past four years, I’ve turned that curiosity into expertise, working across SOC monitoring, incident response, and detection engineering.
         </p>
         <p style={paragraphStyle}>
-          My experience in fintech and banking security operations has shaped my understanding of how to protect what matters most—trust and data integrity. Over the years, I’ve worked at the intersection of SOC operations, product security, and vulnerability assessment, focusing on both detection engineering and proactive defense. Whether fine-tuning SIEM correlation rules, performing security testing, or strengthening endpoint and email security controls, my goal remains simple: <strong style={{color: 'var(--text-primary)'}}>to turn complexity into clarity and build security that scales with confidence.</strong>
+          My experience in fintech and banking security operations has shaped my understanding of how to protect what matters most trust and data integrity. Over the years, I’ve worked at the intersection of SOC operations, product security, and vulnerability assessment, focusing on both detection engineering and proactive defense. Whether fine-tuning SIEM correlation rules, performing security testing, or strengthening endpoint and email security controls, my goal remains simple: <strong style={{ color: 'var(--text-primary)' }}>to turn complexity into clarity and build security that scales with confidence.</strong>
         </p>
       </div>
 
@@ -23,19 +23,19 @@ const About = () => {
           </div>
           <ul style={listStyle}>
             <li style={listItemStyle}>
-              <i className="fas fa-crosshairs" style={listIconStyle}></i> 
+              <i className="fas fa-crosshairs" style={listIconStyle}></i>
               <span><strong>Proactive Defense:</strong> Focused on detection engineering and threat hunting mapped to the MITRE ATT&CK framework, transforming telemetry into context-rich insights.</span>
             </li>
             <li style={listItemStyle}>
-              <i className="fas fa-code" style={listIconStyle}></i> 
+              <i className="fas fa-code" style={listIconStyle}></i>
               <span><strong>Secure Development:</strong> Experienced in application security reviews, mobile app hardening (Guardsquare), and vulnerability management.</span>
             </li>
             <li style={listItemStyle}>
-              <i className="fas fa-shield-alt" style={listIconStyle}></i> 
+              <i className="fas fa-shield-alt" style={listIconStyle}></i>
               <span><strong>Governance & Compliance:</strong> Strong understanding of ISO 27001, PCI DSS, and GDPR practices.</span>
             </li>
             <li style={listItemStyle}>
-              <i className="fas fa-chart-line" style={listIconStyle}></i> 
+              <i className="fas fa-chart-line" style={listIconStyle}></i>
               <span><strong>Continuous Improvement:</strong> Passionate about optimizing detection coverage and reducing false positives.</span>
             </li>
           </ul>
@@ -48,19 +48,19 @@ const About = () => {
           </div>
           <ul style={listStyle}>
             <li style={listItemStyle}>
-              <i className="fas fa-university" style={listIconStyle}></i> 
+              <i className="fas fa-university" style={listIconStyle}></i>
               <span><strong>Education:</strong> Bachelor of Computer Science - Benazir Bhutto Shaheed University Lyari</span>
             </li>
             <li style={listItemStyle}>
-              <i className="fas fa-passport" style={listIconStyle}></i> 
+              <i className="fas fa-passport" style={listIconStyle}></i>
               <span><strong>Nationality:</strong> Pakistani</span>
             </li>
             <li style={listItemStyle}>
-              <i className="fas fa-language" style={listIconStyle}></i> 
+              <i className="fas fa-language" style={listIconStyle}></i>
               <span><strong>Languages:</strong> Urdu (Native), English (C1/B2)</span>
             </li>
             <li style={listItemStyle}>
-              <i className="fas fa-map-marker-alt" style={listIconStyle}></i> 
+              <i className="fas fa-map-marker-alt" style={listIconStyle}></i>
               <span><strong>Location:</strong> Karachi, Pakistan</span>
             </li>
           </ul>
