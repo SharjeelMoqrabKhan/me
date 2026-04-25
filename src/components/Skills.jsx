@@ -2,39 +2,40 @@ import React from 'react';
 
 const Skills = () => {
   const skills = [
-    "SOC Monitoring & Incident Response", "Detection Engineering", "Threat Hunting & IOC Analysis",
-    "Vulnerability Assessment & Management", "Penetration Testing & Web Security", "EDR / WAF Monitoring & Tuning",
-    "Security Automation (Bash, Python)", "Compliance (ISO 27001, PCI-DSS)", "IBM QRadar (SIEM)",
-    "Microsoft Sentinel", "Wazuh (SIEM)", "IBM Guardium (DAM)", "Trend Micro Suite (Apex One, Email, Web Security)",
-    "FireEye HX (EDR)", "Cloudflare WAF", "ModSecurity CRS (WAF)", "Nessus (Vulnerability Scanner)",
-    "Burp Suite (Web PenTesting)", "Nmap, Wireshark", "MITRE ATT&CK Framework", "Cyber Kill Chain Model",
-    "OWASP Top 10 / ASVS", "IDS / IPS", "Python", "Bash", "JavaScript", "HTML / CSS", "Java", "Dart",
-    "Windows (Server & Endpoint)", "Linux (Kali, Ubuntu)", "VMware ESXi / Workstation"
+    { name: "SOC Monitoring & IR", icon: "fa-desktop" },
+    { name: "Detection Engineering", icon: "fa-code" },
+    { name: "Threat Hunting", icon: "fa-search" },
+    { name: "Vulnerability Management", icon: "fa-bug" },
+    { name: "Penetration Testing", icon: "fa-user-secret" },
+    { name: "EDR / WAF Tuning", icon: "fa-shield-alt" },
+    { name: "Security Automation", icon: "fa-robot" },
+    { name: "Compliance (ISO/PCI)", icon: "fa-file-contract" },
+    { name: "IBM QRadar / Sentinel", icon: "fa-chart-line" },
+    { name: "Wazuh / Guardium", icon: "fa-database" },
+    { name: "Trend Micro Suite", icon: "fa-server" },
+    { name: "FireEye HX / Cloudflare", icon: "fa-cloud" },
+    { name: "Nessus / Burp Suite", icon: "fa-tools" },
+    { name: "Python / Bash", icon: "fa-terminal" },
+    { name: "Windows / Linux OS", icon: "fa-laptop-code" },
+    { name: "MITRE ATT&CK", icon: "fa-project-diagram" }
   ];
 
   return (
     <section id="skills" className="container">
-      <h2 className="section-title">Core Skills</h2>
+      <h2 className="section-title">Technical Expertise</h2>
       <div className="glass-panel" style={containerStyle}>
-        <div style={skillListStyle}>
+        <div style={skillGridStyle}>
           {skills.map((skill, index) => (
-            <span 
+            <div 
               key={index} 
-              style={badgeStyle} 
+              style={badgeWrapperStyle} 
               className="skill-badge"
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'var(--accent-color)';
-                e.currentTarget.style.color = '#fff';
-                e.currentTarget.style.transform = 'translateY(-3px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'var(--bg-secondary)';
-                e.currentTarget.style.color = 'var(--accent-color)';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
             >
-              {skill}
-            </span>
+              <div style={iconBoxStyle}>
+                 <i className={`fas ${skill.icon}`}></i>
+              </div>
+              <span style={textStyle}>{skill.name}</span>
+            </div>
           ))}
         </div>
       </div>
@@ -42,29 +43,58 @@ const Skills = () => {
   );
 };
 
+// Styles
 const containerStyle = {
-  padding: '40px'
+  padding: '50px 30px'
 };
 
-const skillListStyle = {
+const skillGridStyle = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+  gap: '20px'
+};
+
+const badgeWrapperStyle = {
   display: 'flex',
-  flexWrap: 'wrap',
-  gap: '15px',
-  justifyContent: 'center'
+  alignItems: 'center',
+  padding: '12px 20px',
+  backgroundColor: 'var(--glass-bg)',
+  border: '1px solid var(--glass-border)',
+  borderRadius: '12px',
+  transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+  cursor: 'default',
+  gap: '15px'
 };
 
-const badgeStyle = {
-  backgroundColor: 'var(--bg-secondary)',
-  color: 'var(--accent-color)',
-  padding: '10px 20px',
-  borderRadius: '8px',
-  fontSize: '0.95em',
-  fontWeight: 600,
-  border: '1px solid var(--accent-color)',
-  boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
-  transition: 'all 0.3s ease',
-  cursor: 'default',
-  display: 'inline-block'
+const iconBoxStyle = {
+  width: '40px',
+  height: '40px',
+  borderRadius: '10px',
+  background: 'linear-gradient(135deg, var(--accent-color), var(--accent-secondary))',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  color: '#000',
+  fontSize: '1.1em',
+  flexShrink: 0
 };
+
+const textStyle = {
+  fontSize: '1em',
+  fontWeight: 600,
+  color: 'var(--text-primary)'
+};
+
+/* Inject CSS for Skill Hover */
+const styleSheet = document.createElement("style");
+styleSheet.innerText = `
+  .skill-badge:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 25px var(--shadow-color);
+    border-color: var(--accent-secondary);
+    background: rgba(255, 255, 255, 0.08);
+  }
+`;
+document.head.appendChild(styleSheet);
 
 export default Skills;
