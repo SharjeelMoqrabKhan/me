@@ -38,7 +38,7 @@ function App() {
         fontSize: '0.9em',
         color: 'var(--text-secondary)'
       }}>
-        <p>&copy; 2026 Sharjeel Moqrab Khan. All Rights Reserved. | Crafted for Professional Security.</p>
+        <p>&copy; 2026 Sharjeel Moqrab Khan. All Rights Reserved.</p>
       </footer>
     </>
   );
