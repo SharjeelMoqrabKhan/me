@@ -15,7 +15,7 @@ const Contact = () => {
             <i className="fas fa-envelope"></i>
           </div>
           <h4 style={titleStyle}>Email Me</h4>
-          <span style={detailStyle}>Sharjeelkh1995@gmail.com</span>
+          <span style={detailStyle}>info@sharjeemoqrab.com</span>
           <div style={actionBtnStyle}>Send a Message</div>
         </a>
 
