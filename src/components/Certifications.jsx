@@ -2,6 +2,7 @@ import React from 'react';
 
 const Certifications = () => {
   const certs = [
+    { title: "SOC Level 2 Certificate", issuer: "TryHackMe", date: "06/2026", link: "https://tryhackme.com/certificate/THM-B4XMSK2II9" },
     { title: "Certified in Cybersecurity (CC)", issuer: "(ISC)²", date: "07/2023", link: "https://drive.google.com/file/d/13CSxSvzS2axZTz4iv06v5X1SqRgusyMX/view" },
     { title: "Azure Fundamentals", issuer: "Microsoft", date: "06/2023", link: "https://www.credly.com/badges/51f90cbb-0b19-4902-a05a-ef9df2fd3126/linked_in_profile" },
     { title: "QRadar SIEM Foundation", issuer: "IBM", date: "04/2023", link: "https://www.credly.com/badges/b57cf301-35e2-4ebc-b01f-32617d18679a/linked_in_profile" },
