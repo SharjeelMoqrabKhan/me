@@ -25,7 +25,7 @@ const Hero = () => {
             I’m a cybersecurity professional with 4+ years of experience in SOC operations, SIEM management, and detection engineering focused on turning visibility into actionable defense and effective incident response. I specialize in SOC process maturity, MITRE ATT&CK aligned detections, and threat analysis to enhance response and resilience.
           </p>
           <div style={actionButtonsStyle}>
-            <a href="https://drive.google.com/file/d/1oKHz6JlY6baxybGDmd2YrA4vLeOloKnt/view?usp=sharing" className="btn-primary" target="_blank" rel="noreferrer">
+            <a href="#" className="btn-primary" target="_blank" rel="noreferrer">
               <i className="fas fa-download" style={{ marginRight: '10px' }}></i> Download Resume
             </a>
             <a href="#contact" className="btn-outline">
