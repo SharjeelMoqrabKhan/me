@@ -27,15 +27,6 @@ const Contact = () => {
           <span style={detailStyle}>Sharjeel Moqrab</span>
           <div style={actionBtnStyle}>View Profile</div>
         </a>
-
-        <a href="https://wa.me/923042358898" target="_blank" rel="noreferrer" className="glass-panel contact-card" style={cardStyle}>
-          <div style={iconBoxStyle}>
-            <i className="fab fa-whatsapp"></i>
-          </div>
-          <h4 style={titleStyle}>WhatsApp</h4>
-          <span style={detailStyle}>(+92) 3042358898</span>
-          <div style={actionBtnStyle}>Chat Now</div>
-        </a>
       </div>
     </section>
   );
