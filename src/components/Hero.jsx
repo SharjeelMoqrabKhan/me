@@ -35,7 +35,6 @@ const Hero = () => {
           <div style={socialLinksStyle}>
             <a href="https://www.linkedin.com/in/sharjeel-moqrab-787614195/" target="_blank" rel="noreferrer" style={socialIconStyle}><i className="fab fa-linkedin"></i></a>
             <a href="mailto:info@sharjeemoqrab.com" style={socialIconStyle}><i className="fas fa-envelope"></i></a>
-            <a href="https://wa.me/923042358898" target="_blank" rel="noreferrer" style={socialIconStyle}><i className="fab fa-whatsapp"></i></a>
             <a href="https://x.com/sharjeel_MK" target="_blank" rel="noreferrer" style={socialIconStyle}><i className="fab fa-x-twitter"></i></a>
             <a href="https://medium.com/@sharjeelkh1995" target="_blank" rel="noreferrer" style={socialIconStyle}><i className="fab fa-medium"></i></a>
           </div>
